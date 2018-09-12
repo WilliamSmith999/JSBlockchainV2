@@ -1,0 +1,9 @@
+const appCode = require('../Block');
+
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  script .Blockchain()
+  script appCode.isChainVaild()
