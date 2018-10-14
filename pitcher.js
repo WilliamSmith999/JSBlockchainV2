@@ -3,7 +3,7 @@ var rp = require('request-promise');
 
 var options = {
     method: 'POST',
-    uri: 'http://api.posttestserver.com/post',
+    uri: 'ec2-34-229-116-79.compute-1.amazonaws.com/catcher',
     body: {
         some: 'payload'
     },
@@ -14,9 +14,9 @@ var options = {
 module.exports = {
 	passit: function{
 		rp(options).then(function (parsedBody) {
-        	counsole.out("pass made");
+        	console.out("pass made");
     		}).catch(function (err) {
-        	counsole.out("Pass failed");
+        	console.out("Pass failed");
     		});
 	}
 };

@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var data = require('../data');
 
+express.use
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -26,8 +28,8 @@ router.get('/Print', function(req, res, next){
 	res.render('print', {body: JSON.stringify(data.GetChain())});
 });
 
-router.post('/catcher:8000', function(req, res, next){
-
+router.post('/catcher', function(req, res, next){
+	console.log(req.body);
 });
 
 module.exports = router;

@@ -7,6 +7,8 @@ var hbs = require('express-handlebars');
 var blocks = require('./Block.js');
 var data = require('./data');
 
+var sender = require('./pitcher');
+
 var indexRouter = require('./routes/index');
 
 var app = express();
@@ -39,6 +41,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+sender.passit();
 
 data.SetChain(blocks.Init());
 
