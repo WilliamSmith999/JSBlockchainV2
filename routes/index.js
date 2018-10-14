@@ -19,7 +19,7 @@ router.post('/add', function(req, res, next){
 });
 
 router.get('/addItem', function(req, res, next){
-        res.render('addBlockPage', { title: data });
+        res.render('addBlockPage', { title: 'data' });
 });
 
 router.get('/Print', function(req, res, next){
