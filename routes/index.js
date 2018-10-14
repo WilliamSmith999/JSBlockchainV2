@@ -26,4 +26,8 @@ router.get('/Print', function(req, res, next){
 	res.render('print', {body: JSON.stringify(data.GetChain())});
 });
 
+router.post('/catcher:8000', function(req, res, next){
+
+});
+
 module.exports = router;
